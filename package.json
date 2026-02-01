@@ -1,0 +1,27 @@
+{
+  "name": "vcc-microservices",
+  "version": "1.0.0",
+  "description": "VirtualBox Multi-VM Microservice Deployment Project",
+  "scripts": {
+    "start:gateway": "cd services/api-gateway && npm start",
+    "start:users": "cd services/user-service && npm start",
+    "start:products": "cd services/product-service && npm start",
+    "start:all": "concurrently \"npm run start:gateway\" \"npm run start:users\" \"npm run start:products\"",
+    "install:all": "cd services/api-gateway && npm install && cd ../user-service && npm install && cd ../product-service && npm install",
+    "test": "echo \"Running tests...\" && npm run test:gateway && npm run test:users && npm run test:products",
+    "test:gateway": "cd services/api-gateway && npm test",
+    "test:users": "cd services/user-service && npm test",
+    "test:products": "cd services/product-service && npm test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "microservices",
+    "virtualbox",
+    "nodejs",
+    "distributed-systems"
+  ],
+  "author": "",
+  "license": "MIT"
+}
