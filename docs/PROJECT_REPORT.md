@@ -394,5 +394,3 @@ curl -X POST http://localhost:3000/api/products \
 - Express.js Documentation: https://expressjs.com/
 
 ---
-
-*Report generated for Virtual and Cloud Computing course project*
